@@ -1,0 +1,17 @@
+{
+    "name": "webstorm-vue-cli-scss-bug",
+    "private": true,
+    "workspaces": {
+        "packages": [
+            "./apps/*"
+        ]
+    },
+    "scripts": {
+        "fix-scss-imports": "renamer -r not-webpack.config.js ./node_modules/@vue/cli-service/webpack.config.js",
+        "break-scss-imports": "renamer -r webpack.config.js ./node_modules/@vue/cli-service/not-webpack.config.js"
+    },
+    "dependencies": {
+        "workspace-app": "*",
+        "renamer": "4.0.0"
+    }
+}
